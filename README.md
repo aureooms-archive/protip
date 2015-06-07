@@ -19,15 +19,18 @@ for i, item in enumerate(mylist):
 
 ## C++ streams performance
 
-If you don't want your C++ to be slower than python (g++)
+If you do not want your C++ to be slower than python (g++)
+
+### Do not synchronize with the C standard input-output
 
 Put this at the beginning of your main
 ```c++
 std::ios_base::sync_with_stdio(false);
 ```
 
-Use `'\n'` instead of `std::endl`, quoting from cplusplus.com
+### Use `'\n'` instead of `std::endl`
 
+Quoting from [cplusplus.com](http://cplusplus.com)
 _**`std::endl`**: inserts a new-line character and flushes the stream. Its behavior is equivalent to calling `os.put('\n')` (or `os.put(os.widen('\n'))`) for character types other than char), and then `os.flush()`._
 
 Note that for `std` *file-like* streams (like `std::cout`) `'\n'` is mapped to the correct platform new line sequence.
