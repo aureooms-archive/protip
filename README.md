@@ -77,3 +77,11 @@ return a &&
        b &&
        c ;
 ```
+
+## JavaScript `Array.prototype.sort` vs Quicksort
+
+
+[Simple recursive quicksort implementation seems faster than the default sort for large arrays](https://jsperf.com/quicksort-t/3).
+
+
+
