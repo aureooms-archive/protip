@@ -38,3 +38,24 @@ Note that for `std` *file-like* streams (like `std::cout`) `\n` is mapped to the
   - http://codeforces.com/blog/entry/925
   - http://www.cplusplus.com/reference/ios/ios_base/sync_with_stdio/
   - http://www.cplusplus.com/reference/ostream/endl/
+
+## Python 3.3 `yield from`
+
+Since Python 3.3, instead of
+
+```py
+for item in iterator : yield item
+```
+
+you can write
+
+```py
+yield from iterator
+```
+
+which can be useful for recursive generators
+```py
+def count( start ) :
+  yield start
+  yield from count( start + 1 )
+```
