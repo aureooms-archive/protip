@@ -1,6 +1,6 @@
 # Protips
 
-## Python enumerate
+## Python `enumerate`
 
 Please do not write
 
