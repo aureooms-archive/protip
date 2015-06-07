@@ -1,6 +1,6 @@
-# protips
+# Protips
 
-## enumerate
+## Python enumerate
 
 Please do not write
 
@@ -17,9 +17,9 @@ for i, item in enumerate(mylist):
   print(i, item)
 ```
 
-## c++ streams performance
+## C++ streams performance
 
-If you don't want your c++ to be slower than python (g++)
+If you don't want your C++ to be slower than python (g++)
 
 Put this at the beginning of your main
 ```c++
@@ -32,7 +32,7 @@ _**`std::endl`**: inserts a new-line character and flushes the stream. Its behav
 
 Note that for `std` *file-like* streams (like `std::cout`) `\n` is mapped to the correct platform new line sequence.
 
-Reference
+### Reference
 
   - http://stackoverflow.com/questions/24895881/why-is-python-faster-than-c-in-this-case
   - http://codeforces.com/blog/entry/925
