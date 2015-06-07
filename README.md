@@ -59,3 +59,21 @@ def count( start ) :
   yield start
   yield from count( start + 1 )
 ```
+
+## JavaScript `return\n`
+
+Below code [returns `undefined` with probability 1](http://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi).
+
+```js
+return
+       a &&
+       b &&
+       c ;
+```
+Better be writing this
+
+```js
+return a &&
+       b &&
+       c ;
+```
