@@ -45,17 +45,13 @@ Note that for `std` *file-like* streams (like `std::cout`) `'\n'` is mapped to t
 ## Python 3.3 `yield from`
 
 Since Python 3.3, instead of
-
 ```py
 for item in iterator : yield item
 ```
-
 you can write
-
 ```py
 yield from iterator
 ```
-
 which can be useful for recursive generators
 ```py
 def count( start ) :
@@ -73,8 +69,7 @@ return
        b &&
        c ;
 ```
-Better be writing this
-
+Use
 ```js
 return a &&
        b &&
@@ -87,4 +82,18 @@ return a &&
 [Simple recursive quicksort implementation seems faster than the default sort for large arrays](https://jsperf.com/quicksort-t/3).
 
 
+## Java `Pattern.replaceAll`
 
+Quote your arguments when using `String.replaceAll(..., ...)`
+```java
+text.replaceAll(Pattern.quote(target), Matcher.quoteReplacement(replacement));
+```
+otherwise you could end up with things like
+```java
+java.lang.IndexOutOfBoundsException: No group 9
+```
+if your text contains `"$9"`, or
+```java
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index ...
+```
+if your text contains a `'+'`
